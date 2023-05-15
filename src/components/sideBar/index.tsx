@@ -1,22 +1,25 @@
 import SideBarItem, { SideBarItemProps } from "./SideBarItem";
+import aberturas from "../../assets/img/aberturas.png";
+import equipamientos from "../../assets/img/equipamiento.png";
+import terminaciones from "../../assets/img/terminaciones.png";
 
 const sidebarStructure: SideBarItemProps[] = [
   {
     name: "Aberturas",
-    img: "Aberturas",
+    img: aberturas,
   },
   {
     name: "Equipamientos",
-    img: "Equipamientos",
+    img: equipamientos,
   },
   {
     name: "Terminaciones",
-    img: "Terminaciones",
+    img: terminaciones,
   },
 ];
 
 const SideBar = () => (
-  <nav>
+  <nav className="flex h-full min-h-screen w-20 items-center bg-white">
     <ul>
       {sidebarStructure.map((sideBarItem, itemIndex) => (
         <SideBarItem
