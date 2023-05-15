@@ -1,4 +1,5 @@
 import Button from "../basics/Button";
+import closeIcon from "../../assets/img/activo.png";
 
 export interface CategoryItemProps {
   name: string;
@@ -13,13 +14,18 @@ export interface CategoryProps {
 export interface SideBarComponentProps {
   title: string;
   categories: CategoryProps[];
+  closeSideBar: () => void;
 }
 
-const SideBarComponent = ({ title, categories }: SideBarComponentProps) => {
+const SideBarComponent = ({
+  title,
+  categories,
+  closeSideBar,
+}: SideBarComponentProps) => {
   return (
-    <section className="flex w-2/6 flex-col">
-      <div className=" h-full bg-gray-100 pl-6 pt-24">
-        <h1 className=" text-lg	font-bold text-slate-500">{title}</h1>
+    <section className="flex w-full flex-row pt-20">
+      <div className=" h-full w-2/6  bg-gray-100 pl-6 ">
+        <h1 className="pt-5 text-lg	font-bold text-slate-500">{title}</h1>
         {categories.map((categoryElem, categoryIndex) => (
           <Button
             key={categoryIndex}
@@ -27,11 +33,18 @@ const SideBarComponent = ({ title, categories }: SideBarComponentProps) => {
               console.log("categoryName has been clicked");
             }}
             text={categoryElem.categoryName}
-            classes="w-[95%] my-1.5	h-10 text-left pl-2.5 text-slate-500	"
+            classes="w-[95%] my-1.5	h-10 text-left pl-2.5 text-slate-500"
+            includeArrow
           />
         ))}
       </div>
-      <div>pepepe</div>
+      <div className=" flex items-center py-1" onClick={closeSideBar}>
+        <img
+          className="h-9 rounded-r-lg bg-gray-100  px-1 py-1 "
+          alt="Logo"
+          src={closeIcon}
+        />
+      </div>
     </section>
   );
 };
