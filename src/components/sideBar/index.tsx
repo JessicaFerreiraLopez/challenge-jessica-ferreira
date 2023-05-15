@@ -1,14 +1,21 @@
-import SideBarItem, { SideBarItemProps } from "./SideBarMenuItem";
 import aberturas from "../../assets/img/aberturas.png";
 import equipamientos from "../../assets/img/equipamiento.png";
 import terminaciones from "../../assets/img/terminaciones.png";
 import SideBarComponent from "./SideBarComponent";
 import { useState } from "react";
+import SideBarMenuItem from "./SideBarMenuItem";
+
+interface TabsType {
+  categoryComponent?: JSX.Element;
+  productsComponent?: JSX.Element;
+  name: string;
+  img: string;
+}
 
 const SideBar = () => {
-  const [tabPanelIsOpen, setTabPanelIsOpen] = useState<boolean>(false);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const sidebarStructure: SideBarItemProps[] = [
+  const sidebarStructure: TabsType[] = [
     {
       name: "Aberturas",
       img: aberturas,
@@ -28,22 +35,22 @@ const SideBar = () => {
       <nav className=" flex h-full min-h-screen w-20 items-center bg-white">
         <ul>
           {sidebarStructure.map((sideBarItem, itemIndex) => (
-            <SideBarItem
+            <SideBarMenuItem
               key={itemIndex}
               name={sideBarItem.name}
               img={sideBarItem.img}
               onClick={() => {
-                setTabPanelIsOpen(true);
+                setActiveIndex(itemIndex);
               }}
             />
           ))}
         </ul>
       </nav>
 
-      {tabPanelIsOpen && (
+      {activeIndex !== null && (
         <SideBarComponent
-          closeSideBar={() => setTabPanelIsOpen(false)}
-          title="Aberturas"
+          closeSideBar={() => setActiveIndex(null)}
+          title={sidebarStructure[activeIndex].name}
           categories={[
             {
               categoryName: "Camas",
