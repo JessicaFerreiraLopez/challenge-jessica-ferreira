@@ -19,7 +19,10 @@ const sidebarStructure: SideBarItemProps[] = [
 ];
 
 const SideBar = () => (
-  <nav className="flex h-full min-h-screen w-20 items-center bg-white">
+  <nav
+    className=" flex h-full min-h-screen w-20 items-center bg-white
+  "
+  >
     <ul>
       {sidebarStructure.map((sideBarItem, itemIndex) => (
         <SideBarItem
