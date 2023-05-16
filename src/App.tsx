@@ -1,4 +1,3 @@
-import "./App.css";
 import Controllers from "./components/controllers";
 import Header from "./components/header";
 import SideBar from "./components/sideBar";

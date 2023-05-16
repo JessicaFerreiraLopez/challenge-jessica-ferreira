@@ -26,14 +26,14 @@ const ProductsList = ({
       </h1>
       <div className="flex ">
         {data?.[categoryIndex].items.map((item, itemIndex) => (
-          <div className="flex basis-1/3 flex-col">
+          <div className="flex basis-1/3 flex-col" key={itemIndex}>
             <img
               alt="item"
-              className="h-40	w-full pr-5	"
+              className="h-40 w-full pr-5"
               src={item.img}
               loading="lazy"
             />
-            <p className="pt-5 text-center text-xs  text-slate-400">
+            <p className="pt-5 text-center text-xs text-slate-400">
               {item.name}
             </p>
           </div>
