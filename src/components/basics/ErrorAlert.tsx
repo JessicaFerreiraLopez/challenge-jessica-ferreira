@@ -4,10 +4,12 @@ interface ErrorAlertProps {
 export default function ErrorAlert({ error }: ErrorAlertProps) {
   return (
     <div
-      className="bg-danger-100 text-danger-700 mb-4 rounded-lg px-6 py-5 text-base"
       role="alert"
+      className="  flex h-full w-full place-content-center items-end "
     >
-      {error}
+      <div className="w-full rounded border  border-red-400 bg-red-100 px-4 py-3 text-red-700">
+        <p>{error}</p>
+      </div>
     </div>
   );
 }
