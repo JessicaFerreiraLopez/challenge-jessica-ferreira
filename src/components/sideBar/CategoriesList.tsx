@@ -1,5 +1,5 @@
 import { CategoryDTO } from "../../api/types";
-import Button from "../basics/Button";
+import Button from "../general/Button";
 
 export interface CategoriesListProps {
   title: string;

@@ -1,5 +1,5 @@
 import logo from "../../assets/img/logo.png";
-import Select from "../basics/Select";
+import Select from "../general/Select";
 
 const Header = () => (
   <header>

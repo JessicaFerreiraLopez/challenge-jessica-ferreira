@@ -1,7 +1,7 @@
 import plusImg from "../../assets/img/mas.png";
 import minusImg from "../../assets/img/menos.png";
 import arrow from "../../assets/img/Flecha.png";
-import Button from "../basics/Button";
+import Button from "../general/Button";
 
 const Controllers = () => {
   const buttonsStyles: string = "h-7 px-1	py-1";

@@ -1,10 +1,10 @@
-import Button from "../basics/Button";
+import Button from "../general/Button";
 import closeIcon from "../../assets/img/activo.png";
 import useFetchApi from "../../utils/hooks/useFetchApi";
 import { useEffect, useState } from "react";
 import { CategoryDTO } from "../../api/types";
-import Loader from "../basics/Loader";
-import ErrorAlert from "../basics/ErrorAlert";
+import Loader from "../general/Loader";
+import ErrorAlert from "../general/ErrorAlert";
 import CategoriesList from "./CategoriesList";
 import ProductsList from "./ProductsList";
 
