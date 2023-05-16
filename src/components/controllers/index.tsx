@@ -5,15 +5,14 @@ import Button from "../basics/Button";
 const Controllers = () => {
   const buttonsStyles: string = "h-7 px-1	py-1";
   return (
-    <>
-      <div>
+    <div className=" ">
+      <div className=" fixed bottom-[5%] right-[10%]	flex h-20	flex-col place-content-between rounded-md bg-white py-1">
         <Button
           onClick={() => {
             console.log("Add has been clicked");
           }}
           img={plusImg}
           imgClasses={buttonsStyles}
-          classes="fixed bottom-[11%]	right-[10%]	py-1"
         />
         <Button
           onClick={() => {
@@ -21,17 +20,16 @@ const Controllers = () => {
           }}
           img={minusImg}
           imgClasses={buttonsStyles}
-          classes="fixed bottom-[5%]	right-[10%]	py-1"
         />
       </div>
-      <div className="bg-white">
+      <div className=" fixed bottom-[5%] right-[2%] h-20 w-20 rounded-md bg-white">
         <Button
           onClick={() => {
             console.log("Up arrow has been clicked");
           }}
           img={arrow}
           imgClasses={buttonsStyles}
-          classes="fixed bottom-[12%]	right-[5%]	"
+          classes="absolute top-[5%] right-[30%]	"
         />
         <Button
           onClick={() => {
@@ -39,7 +37,7 @@ const Controllers = () => {
           }}
           img={arrow}
           imgClasses={`rotate-180 ${buttonsStyles}`}
-          classes="fixed bottom-[5%]	right-[5%]	"
+          classes="absolute bottom-[5%] right-[30%]	"
         />
         <Button
           onClick={() => {
@@ -47,7 +45,7 @@ const Controllers = () => {
           }}
           img={arrow}
           imgClasses={`-rotate-90 ${buttonsStyles}`}
-          classes="fixed bottom-[8.5%]	right-[7%]	"
+          classes="absolute bottom-[30%]	left-[5%]	"
         />
         <Button
           onClick={() => {
@@ -55,10 +53,10 @@ const Controllers = () => {
           }}
           img={arrow}
           imgClasses={`rotate-90 ${buttonsStyles}`}
-          classes="fixed bottom-[8.5%]	right-[3%]	"
+          classes="absolute bottom-[30%]	right-[5%]	"
         />
       </div>
-    </>
+    </div>
   );
 };
 
