@@ -1,12 +1,30 @@
 import plusImg from "../../assets/img/mas.png";
 import minusImg from "../../assets/img/menos.png";
 import arrow from "../../assets/img/Flecha.png";
-import Button from "../basics/Button";
+import Button from "../general/Button";
+
 const Controllers = () => {
   const buttonsStyles: string = "h-7 px-1	py-1";
   return (
-    <div className=" ">
-      <div className=" fixed bottom-[5%] right-[10%]	flex h-20	flex-col place-content-between rounded-md bg-white py-1">
+    <div className="relative mt-20 min-h-[550px]			w-full bg-gray-200">
+      <div className=" absolute right-[15px] top-[5%] flex w-40	flex-row justify-between rounded">
+        <Button
+          onClick={() => {
+            console.log("Fijar button has been clicked");
+          }}
+          classes="my-1.5	h-10 text-left p-4 text-slate-500 bg-white hover:bg-slate-200"
+          text="Fijar"
+        />
+        <Button
+          onClick={() => {
+            console.log("Borrar button has been clicked");
+          }}
+          classes=" my-1.5	h-10 text-left p-4 text-slate-500 bg-white hover:bg-slate-200"
+          text="Borrar"
+        />
+      </div>
+
+      <div className=" absolute bottom-[5%] right-[120px]	flex h-20	flex-col place-content-between rounded-md bg-white py-1">
         <Button
           onClick={() => {
             console.log("Add has been clicked");
@@ -22,7 +40,8 @@ const Controllers = () => {
           imgClasses={buttonsStyles}
         />
       </div>
-      <div className=" fixed bottom-[5%] right-[2%] h-20 w-20 rounded-md bg-white">
+
+      <div className=" absolute bottom-[5%] right-[15px] h-20 w-20 rounded-md bg-white">
         <Button
           onClick={() => {
             console.log("Up arrow has been clicked");

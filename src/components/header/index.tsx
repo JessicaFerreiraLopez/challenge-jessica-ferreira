@@ -1,5 +1,6 @@
 import logo from "../../assets/img/logo.png";
-import Select from "../basics/Select";
+import Select from "../general/Select";
+
 const Header = () => (
   <header>
     <nav className="fixed top-0	 flex	 h-20 w-full	items-center justify-between bg-[#262626] px-[5%]">

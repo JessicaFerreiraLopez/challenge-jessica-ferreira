@@ -11,6 +11,7 @@ export const getEquipamientoData = async (): Promise<CategoryDTO[]> => {
 
   return data;
 };
+
 export const getAberturasData = async (): Promise<CategoryDTO[]> => {
   const { data } = await axios
     .get(`${CATALOGO_API_HOST}/aberturas`)

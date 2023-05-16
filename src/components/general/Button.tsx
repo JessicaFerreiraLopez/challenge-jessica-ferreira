@@ -6,7 +6,7 @@ interface ButtonProps {
   isDisabled?: boolean;
   classes?: string;
   img?: string;
-  imgClasses?: string; //TODO : improve  text or image logic
+  imgClasses?: string;
   includeArrow?: boolean;
 }
 
@@ -21,7 +21,7 @@ function Button({
 }: ButtonProps) {
   return (
     <button
-      className={`flex items-center justify-between rounded-md border-inherit bg-white ${classes}`}
+      className={`flex items-center justify-between rounded-md border-inherit  ${classes}`}
       onClick={onClick}
       disabled={isDisabled}
     >
