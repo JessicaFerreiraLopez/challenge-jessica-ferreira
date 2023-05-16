@@ -59,22 +59,6 @@ const SideBar = () => {
           closeSideBar={() => setActiveIndex(null)}
           title={sidebarStructure[activeIndex].name}
           getInfo={sidebarStructure[activeIndex].getInfo}
-          categories={[
-            {
-              categoryName: "Camas",
-              items: [
-                { name: "simple", img: "simpleIMG" },
-                { name: "simple", img: "simpleIMG" },
-              ],
-            },
-            {
-              categoryName: "Sillones",
-              items: [
-                { name: "simple", img: "simpleIMG" },
-                { name: "simple", img: "simpleIMG" },
-              ],
-            },
-          ]}
         />
       )}
     </>
