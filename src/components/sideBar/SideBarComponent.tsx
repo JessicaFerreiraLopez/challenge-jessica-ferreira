@@ -55,11 +55,12 @@ const SideBarComponent = ({
           />
         )}
       </div>
-      <div className="flex items-center py-1" onClick={closeSideBar}>
-        <img
-          className="h-9 rounded-r-lg bg-gray-100 px-1 py-1 "
-          alt="Close sidebar Icon"
-          src={closeIcon}
+      <div className="flex items-center py-1">
+        <Button
+          onClick={closeSideBar}
+          img={closeIcon}
+          classes="h-16 bg-gray-100"
+          imgClasses="h-7 rounded-r-lg bg-gray-100 px-1 py-1 "
         />
       </div>
     </section>

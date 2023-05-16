@@ -21,7 +21,7 @@ function Button({
 }: ButtonProps) {
   return (
     <button
-      className={`flex items-center justify-between rounded-md border-inherit bg-white ${classes}`}
+      className={`flex items-center justify-between rounded-md border-inherit ${classes}`}
       onClick={onClick}
       disabled={isDisabled}
     >
