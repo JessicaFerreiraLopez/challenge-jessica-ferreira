@@ -24,12 +24,12 @@ const ProductsList = ({
       <h1 className=" text-lg	font-bold text-slate-500">
         {data?.[categoryIndex].name}
       </h1>
-      <div className="flex ">
+      <div className="flex flex-col sm:flex-row ">
         {data?.[categoryIndex].items.map((item, itemIndex) => (
-          <div className="flex basis-1/3 flex-col" key={itemIndex}>
+          <div className=" sm:flex sm:basis-1/3 sm:flex-col" key={itemIndex}>
             <img
               alt="item"
-              className="h-40 w-full pr-5"
+              className=" max-h-32  w-full	 pr-5 sm:h-40"
               src={item.img}
               loading="lazy"
             />

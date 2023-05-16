@@ -18,6 +18,7 @@ interface TabsType {
 
 const SideBar = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   const sidebarStructure: TabsType[] = [
     {
       name: "Aberturas",
@@ -37,7 +38,7 @@ const SideBar = () => {
   ];
 
   return (
-    <>
+    <div className="flex w-full">
       <nav className=" flex h-full min-h-screen w-20 items-center bg-white">
         <ul className="bg-gray-100">
           {sidebarStructure.map((sideBarItem, itemIndex) => (
@@ -61,7 +62,7 @@ const SideBar = () => {
           getInfo={sidebarStructure[activeIndex].getInfo}
         />
       )}
-    </>
+    </div>
   );
 };
 

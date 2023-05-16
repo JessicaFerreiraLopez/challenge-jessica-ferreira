@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# Challenge Técnico - Jessica Ferreira
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Librerías y frameworks utilizados
 
-## Available Scripts
+- **Tailwind CSS**: Incluido en el proyecto por requerimiento.
+- **Axios**: Cliente HTTP que decidí utilizar por su sencilla implementación y las funcionalidades que ofrece, considerando un buen costo-beneficio.
 
-In the project directory, you can run:
+## Instrucciones para ejecutar el proyecto
 
-### `npm start`
+Para ejecutar el proyecto, sigue estos sencillos pasos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clona el repositorio.
+2. Ejecuta el comando `npm install` para instalar las librerías utilizadas localmente.
+3. Ejecuta el comando `npm start` para levantar el proyecto.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Decisiones de desarrollo
 
-### `npm test`
+- Manejo de estados: Utilicé el hook `useState` en cada componente en lugar de opciones más globales, como contextos o Redux, ya que los estados requeridos eran simples y no necesitaban ser globales.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- TypeScript: Incluí TypeScript para un mejor manejo de errores y para estandarizar el código.
 
-### `npm run build`
+- Consultas a la API: Utilicé Axios junto con un hook personalizado para manejar errores y estados de las peticiones. Esta estrategia resultó simple pero efectiva, aunque no estaba incluida en el diseño original, agregué un spinner para gestionar los tiempos de respuesta.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Diseño de la barra lateral: Evalué diferentes opciones para implementar la barra lateral. Decidí utilizar una colección centralizada que incluye todas las opciones y sus respectivas consultas a la API. Esto permite agregar fácilmente nuevas opciones estáticamente y, en caso de requerir grupos dinámicos, reutilizar la lógica adaptándola al modelo de datos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Mejoras sugeridas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Como mejoras principales, implementaria una paginación, especialmente para los productos por categoría, ya que el número de productos puede aumentar considerablemente y afectar el rendimiento de la aplicación.
 
-### `npm run eject`
+Además, sería beneficioso aplicar lazy loading a las imágenes para una carga más eficiente. Actualmente, he utilizado la propiedad `loading="lazy"`, pero su soporte puede variar según el navegador.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Si bien le hice una sencilla optimizacion para dispositivos moviles, creo que podria mejorar.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Cualquier Feedback que tengas me ayuda a mejorar y estaré encantada de recibirlo. ¡Gracias por tu tiempo y por la oportunidad de participar en este desafío!

@@ -1,5 +1,5 @@
 import { CategoryDTO } from "../../api/types";
-import Button from "../basics/Button";
+import Button from "../general/Button";
 
 export interface CategoriesListProps {
   title: string;
@@ -22,7 +22,7 @@ const CategoriesList = ({
             setActiveIndexFunction(categoryIndex);
           }}
           text={categoryElem.name}
-          classes="w-[95%] my-1.5	h-10 text-left pl-2.5 text-slate-500"
+          classes="w-[95%] my-1.5	h-10 text-left pl-2.5 text-slate-500 bg-white hover:bg-slate-200"
           includeArrow
         />
       ))}
