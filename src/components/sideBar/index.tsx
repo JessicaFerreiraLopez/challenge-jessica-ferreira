@@ -4,7 +4,6 @@ import terminaciones from "../../assets/img/terminaciones.png";
 import SideBarComponent from "./SideBarComponent";
 import { useState } from "react";
 import SideBarMenuItem from "./SideBarMenuItem";
-import useFetchApi from "../../utils/hooks/useFetchApi";
 import { getEquipamientoData, getTerminacionesData } from "../../api/apiCalls";
 import { getAberturasData } from "../../api/apiCalls";
 import { CategoryDTO } from "../../api/types";
