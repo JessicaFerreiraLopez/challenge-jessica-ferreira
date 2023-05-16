@@ -1,5 +1,5 @@
 import { CategoryDTO } from "../../api/types";
-
+import ImagenNotFound from "../../assets/img/img-not-found.png";
 export interface ProductsListProps {
   title: string;
   data: CategoryDTO[] | undefined;

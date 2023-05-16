@@ -5,7 +5,24 @@ import Button from "../basics/Button";
 const Controllers = () => {
   const buttonsStyles: string = "h-7 px-1	py-1";
   return (
-    <div className=" ">
+    <div>
+      <div className=" fixed right-[2%] top-[15%] flex	w-40 flex-row justify-between rounded">
+        <Button
+          onClick={() => {
+            console.log("Fijar button has been clicked");
+          }}
+          classes="my-1.5	h-10 text-left p-4 text-slate-500 bg-white"
+          text="Fijar"
+        />
+        <Button
+          onClick={() => {
+            console.log("Borrar button has been clicked");
+          }}
+          classes=" my-1.5	h-10 text-left p-4 text-slate-500 bg-white"
+          text="Borrar"
+        />
+      </div>
+
       <div className=" fixed bottom-[5%] right-[10%]	flex h-20	flex-col place-content-between rounded-md bg-white py-1">
         <Button
           onClick={() => {
