@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { CategoryDTO } from "../../api/types";
 import Loader from "../basics/Loader";
 import ErrorAlert from "../basics/ErrorAlert";
+import CategoriesList from "./CategoriesList";
+import ProductsList from "./ProductsList";
 
 export interface SideBarComponentProps {
   title: string;
@@ -35,47 +37,22 @@ const SideBarComponent = ({
         ) : error ? (
           <ErrorAlert error={error} />
         ) : activeIndex === null ? (
-          <>
-            <h1 className="pt-5 text-lg	font-bold text-slate-500">{title}</h1>
-            {data?.map((categoryElem, categoryIndex) => (
-              <Button
-                key={categoryIndex}
-                onClick={() => {
-                  setActiveIndex(categoryIndex);
-                }}
-                text={categoryElem.name}
-                classes="w-[95%] my-1.5	h-10 text-left pl-2.5 text-slate-500"
-                includeArrow
-              />
-            ))}
-          </>
+          <CategoriesList
+            title={title}
+            data={data}
+            setActiveIndexFunction={(categoryIndex: number) => {
+              setActiveIndex(categoryIndex);
+            }}
+          />
         ) : (
-          <>
-            <h1
-              className="pt-5 text-xs font-bold text-slate-400"
-              onClick={() => {
-                setActiveIndex(null);
-              }}
-            >{`< ${title}`}</h1>
-            <h1 className=" text-lg	font-bold text-slate-500">
-              {data?.[activeIndex].name}
-            </h1>
-            <div className="flex ">
-              {data?.[activeIndex].items.map((item, itemIndex) => (
-                <div className="flex basis-1/3 flex-col">
-                  <img
-                    alt="item"
-                    className="h-40	w-full pr-5	"
-                    src={item.img}
-                    loading="lazy"
-                  />
-                  <p className="pt-5 text-center text-xs  text-slate-400">
-                    {item.name}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </>
+          <ProductsList
+            title={title}
+            data={data}
+            setActiveIndexFunction={() => {
+              setActiveIndex(null);
+            }}
+            categoryIndex={activeIndex}
+          />
         )}
       </div>
       <div className="flex items-center py-1" onClick={closeSideBar}>
