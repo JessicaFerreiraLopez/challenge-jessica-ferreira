@@ -6,7 +6,7 @@ interface ButtonProps {
   isDisabled?: boolean;
   classes?: string;
   img?: string;
-  imgClasses?: string; //TODO : improve  text or image logic
+  imgClasses?: string;
   includeArrow?: boolean;
 }
 

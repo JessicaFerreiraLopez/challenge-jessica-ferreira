@@ -2,9 +2,9 @@ import Controllers from "./components/controllers";
 import Header from "./components/header";
 import SideBar from "./components/sideBar";
 
-function App() {
+function Layout() {
   return (
-    <div className="flex bg-gray-200">
+    <div className="flex flex-col bg-gray-200  sm:flex-row  	">
       <Header />
       <SideBar />
       <Controllers />
@@ -12,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default Layout;

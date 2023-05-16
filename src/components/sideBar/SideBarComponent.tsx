@@ -30,8 +30,8 @@ const SideBarComponent = ({
   }, [getInfo]);
 
   return (
-    <section className="flex w-full flex-row pt-20">
-      <div className=" h-full w-2/6  bg-gray-100 pl-6 ">
+    <section className="flex  w-[85%]   flex-row	pt-20 sm:w-3/5	">
+      <div className=" h-full w-full bg-gray-100 pl-6 ">
         {isLoading ? (
           <Loader />
         ) : error ? (
