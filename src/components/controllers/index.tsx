@@ -12,14 +12,14 @@ const Controllers = () => {
           onClick={() => {
             console.log("Fijar button has been clicked");
           }}
-          classes="my-1.5	h-10 text-left p-4 text-slate-500 bg-white"
+          classes="my-1.5	h-10 text-left p-4 text-slate-500 bg-white hover:bg-slate-200"
           text="Fijar"
         />
         <Button
           onClick={() => {
             console.log("Borrar button has been clicked");
           }}
-          classes=" my-1.5	h-10 text-left p-4 text-slate-500 bg-white"
+          classes=" my-1.5	h-10 text-left p-4 text-slate-500 bg-white hover:bg-slate-200"
           text="Borrar"
         />
       </div>

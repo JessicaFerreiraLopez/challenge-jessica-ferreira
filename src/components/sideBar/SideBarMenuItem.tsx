@@ -15,7 +15,7 @@ const SideBarMenuItem = ({
   return (
     <>
       <li
-        className={` ${activeClassName} flex cursor-pointer flex-col items-center px-1`}
+        className={` ${activeClassName} flex cursor-pointer flex-col items-center px-1 hover:bg-slate-200`}
         onClick={onClick}
       >
         <img className="h-10" alt="item icon" src={img} />
