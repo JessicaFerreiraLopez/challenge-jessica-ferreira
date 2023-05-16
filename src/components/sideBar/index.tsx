@@ -39,7 +39,7 @@ const SideBar = () => {
   return (
     <>
       <nav className=" flex h-full min-h-screen w-20 items-center bg-white">
-        <ul>
+        <ul className="bg-gray-100">
           {sidebarStructure.map((sideBarItem, itemIndex) => (
             <SideBarMenuItem
               key={itemIndex}
@@ -48,6 +48,7 @@ const SideBar = () => {
               onClick={() => {
                 setActiveIndex(itemIndex);
               }}
+              isActive={activeIndex === itemIndex}
             />
           ))}
         </ul>
